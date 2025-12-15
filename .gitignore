@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+.git/
+# .env
+*.log
+.coverage
+htmlcov/
+db.sqlite3
+api_errors.log
