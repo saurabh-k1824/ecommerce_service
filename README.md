@@ -6,6 +6,18 @@ Note: For testing purpose pushed the .env and .sqlite3 file in github
 
 ## 1. Overview
 
+This project is a production-style E-commerce REST API built using Django REST Framework, implementing OAuth 2.0 concepts with JWT, scope-based authorization, and strict business rules.
+
+The system models a real-world marketplace with two clearly defined user roles:
+
+User Roles
+Role	Description
+ADMIN (Seller)	Manages categories, products, users, and order status
+USER (Customer / Buyer)	Browses products and creates/manages own orders
+
+Important Business Rule
+Admins (Sellers) cannot create orders.
+Only Normal Users (Customers) are allowed to place orders.
 
 The API manages:
 - Authentication & Users
@@ -21,6 +33,7 @@ The API manages:
 - Pagination & filtering
 - Prometheus-compatible metrics
 - Clean separation of concerns
+- Comprehensive API tests using APITestCase
 
 ---
 
@@ -72,6 +85,22 @@ ecommerce_service/
 - **Views / ViewSets** → API layer
 - **Middleware** → authentication & metrics
 
+### Initial Seed Data (For Testing)
+
+During project setup, seed data is automatically inserted into the database to make testing easier.
+
+Seeded Users
+Role	Email	Password
+Admin (Seller)	user@admin.com	Qwerty@12345
+User (Customer)	user@gmail.com	Qwerty@12345
+User (Customer)	user2@gmail.com	Qwerty@12345
+Seeded Data Includes
+
+3 Users (1 Admin, 2 Normal Users)
+
+Multiple Categories
+
+Multiple Products linked to categories
 ---
 
 ## 4. Setup Instructions
