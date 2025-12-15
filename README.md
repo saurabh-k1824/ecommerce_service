@@ -1,5 +1,6 @@
 # E-commerce REST API
 *(Django REST Framework | OAuth 2.0 Concepts)*
+Note: For testing purpose pushed the .env and .sqlite3 file in github
 
 ---
 
@@ -29,7 +30,7 @@ The API manages:
 - Django 
 - Django REST Framework
 - JWT (OAuth 2.0 concepts with scopes)
-- SQLite 
+- Postgres 
 - Prometheus Python Client
 - Swagger / OpenAPI
 - Django Test Framework (APITestCase)
